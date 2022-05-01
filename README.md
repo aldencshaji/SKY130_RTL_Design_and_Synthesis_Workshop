@@ -1,12 +1,13 @@
 # SKY130_RTL_Design_and_Synthesis_Workshop
 VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technology
 
-![download](https://user-images.githubusercontent.com/81924760/166146197-e74b5a9a-fa8f-4d9f-b821-64f83c55b716.jpg)
+![](images/VSD_IAT_poster.jpg)
 
 
-Table of Contents
-- [1. Introduction](#1-introduction)
-- [2. Day 1 - Introduction to Verilog RTL design and Synthesis](#2-day-1---introduction-to-verilog-rtl-design-and-synthesis)
+# Table of Contents
+- [1. Project Scope](#1-project-scope)
+- [2. Prerequisites](#2-prerequisites)
+- [3. Day 1 - Introduction to Verilog RTL design and Synthesis](#2-day-1---introduction-to-verilog-rtl-design-and-synthesis)
   - [2.1. Introduction to Simulation](#21-introduction-to-simulation)
     - [2.1.1. Simulation results](#211-simulation-results)
   - [2.2. Introduction to Synthesis](#22-introduction-to-synthesis)
@@ -24,6 +25,18 @@ Table of Contents
 
 
 
-# 1. Introduction
-This is a 5-day workshop from VSD-IAT on RTL design and synthesis using open source silicon toolchains involving iVerilog, GTKWave, Yosys with Sky130 technology.  
-This report is written as a part of final submission to summarize the 5-day journey through the workshop.
+# 1. Project Scope
+  This is a 5-day workshop from VSD-IAT on RTL design and synthesis using open source silicon toolchains involving iVerilog, GTKWave, Yosys with Sky130 technology.  
+
+  - The SkyWater Open Source PDK is a collaboration between Google and SkyWater Technology Foundry to provide a fully open source Process Design Kit and related  resources, which can be used to create manufacturable designs at SkyWater’s facility.
+    The SkyWater Open Source PDK documentation can be found at <https://skywater-pdk.rtfd.io>.
+  - iverilog - Iverilog stands for Icarus verilog, is an open source verilog simulator.
+  - GTKWave - GTKWave is an open-source vcd(value change dump) waveform viewer.
+  - Yosys - Yosys is an open-source synthesis tool. These are the open-source tools used in the labs for the workshop.
+
+This particular workshop covers the various aspects of design in Verilog HDL both theoretically and practically with labs using open-source softwares through their VSD-IAT portal. Beginning with an introduction to digital design using Verilog HDL,it cover digital design steps that include design, functional simulation, test bench based validation of the design functionality and logic Synthesis with optimization.
+
+# 2. Prerequisites
+  - Require a Linux based OS and a host of open source EDA tools.
+  - Basic knowledge of Verilog HDL is required for better understanding.
+
