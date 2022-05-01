@@ -54,8 +54,6 @@ This particular workshop covers the various aspects of design in Verilog HDL bot
       RTL Design stands for Register Transfer Level. It provides an abstraction of the digital circuit using:
       Combinational logic, Registers, Modules (IP’s or Soft Macros).
       
-    ![](images/Testbench.png)  
-      
 **Test Bench**:
       It is the Setup to apply stimulus(Test_Vectors) to Design to check it's Functionality.Here the Logical functionality is verified.
       
@@ -68,3 +66,4 @@ It is important to note that the test bench doesn't have any primary input and p
 The simulation output of iVerilog can be taken as a value change dump ('.vcd') file that could then be visualized in GTKWave.  
 [GTKWave](http://gtkwave.sourceforge.net/) is an open source tool for visualizing the signal dumps in .vcd/.lxt formats.
 
+![](images/Testbench.png)  
