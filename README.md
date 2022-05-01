@@ -9,8 +9,7 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
 - [2. Prerequisites](#2-prerequisites)
 - [3. Day 1 - Introduction to Verilog RTL design and Synthesis](#3-day-1---introduction-to-verilog-rtl-design-and-synthesis)
   - [3.1. Brief Principles of Operation](#31-brief-principles-of-operation)
-    - [3.1.1. Simulation results](#311-simulation-results)
-  - [2.2. Introduction to Synthesis](#22-introduction-to-synthesis)
+  - [3.2. Introduction to Lab Session](#32-introduction-to-lab-session)
     - [2.2.1. Yosys synthesizer flow](#221-yosys-synthesizer-flow)
       - [2.2.1.1. Read RTL design](#2211-read-rtl-design)
       - [2.2.1.2. Generic synthesis](#2212-generic-synthesis)
@@ -57,6 +56,9 @@ This particular workshop covers the various aspects of design in Verilog HDL bot
 **Test Bench**:
       It is the Setup to apply stimulus(Test_Vectors) to Design to check it's Functionality.Here the Logical functionality is verified.
       
+ ![](images/Testbench.png)
+      
+    
 **Design iverilog and Testbench**:
 The RTL design written in verilog code has some primary inputs and primary outputs. It may have one or more primary inputs and one or more corresponding primary outputs.
 We need to give stimulus to all the primary inputs and need to observe the primary outputs. Thus we need stimulus generator at the input and stimulus observer at the output.
@@ -66,4 +68,32 @@ It is important to note that the test bench doesn't have any primary input and p
 The simulation output of iVerilog can be taken as a value change dump ('.vcd') file that could then be visualized in GTKWave.  
 [GTKWave](http://gtkwave.sourceforge.net/) is an open source tool for visualizing the signal dumps in .vcd/.lxt formats.
 
-![](images/Testbench.png)  
+ ![](images/gtkwave_Flow.jpg)
+ 
+ **Synthesis**:
+ The synthesis tool takes the RTL desgin and the cell library (liberty file) as inputs and translates the RTL into netlist. Hence the netlist is the gate-level representation of the specifiec logic desgin via Verilog HDL in RTL.
+ 
+ ## 3.2. Introduction to Lab Session
+ 
+ - create a directory called VLSI using the terminal.
+
+   *mkdir VLSI
+   
+ - After creating the VLSI directory, we must git clone some repositories through the given commands. 
+   
+   *git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
+ - After git cloning we can see that two new directories (sky130RTLDesignAndSynthesisWorkshop and vsdflow) have been created in the VLSI directory.It contains various files required for this workshop such as my_lib which contains the library files lib and verilog_model.verilog_files which contains various verilog codes and its testbench files for all the lab expirements.
+ 
+ - We use the command iverilog to load the simulator follwed by the verilog file and testbench name. a.out file is created in the verilog_files folder.
+   
+   *iverilog good_mux.v tb_good_mux.v
+  
+ - After creating a.out file we execute it using ./a.out it is going to dump the vcd file.
+   
+   *./a.out
+ 
+ - Then we write the command to view the waveform for logical verification, run the .vcd file with gtkwave.
+ 
+   *gtkwave tb_good_mux.vcd
+  
