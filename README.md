@@ -8,7 +8,7 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
 - [1. Project Scope](#1-project-scope)
 - [2. Prerequisites](#2-prerequisites)
 - [3. Day 1 - Introduction to Verilog RTL design and Synthesis](#3-day-1---introduction-to-verilog-rtl-design-and-synthesis)
-  - [3.1. Introduction to Simulation](#31-introduction-to-simulation)
+  - [3.1. Brief Principles of Operation](#31-brief-principles-of-operation)
     - [3.1.1. Simulation results](#311-simulation-results)
   - [2.2. Introduction to Synthesis](#22-introduction-to-synthesis)
     - [2.2.1. Yosys synthesizer flow](#221-yosys-synthesizer-flow)
@@ -41,7 +41,7 @@ This particular workshop covers the various aspects of design in Verilog HDL bot
   - Basic knowledge of Verilog HDL is required for better understanding.
 
 # 3. Day 1 - Introduction to Verilog RTL design and Synthesis
-## 3.1. Introduction to Simulation
+## 3.1. Brief Principles of Operation
 
 **Simulation**:
      It is technique for applying different input stimulus to the design at different times to check if the RTL code behaves in an intended way. Here we are dealing with Digital design which is modelled using HDL (hardware description language) like VHDL,Verilog,System Verilog.
@@ -53,6 +53,8 @@ This particular workshop covers the various aspects of design in Verilog HDL bot
     RTL design is the implementation based on specs. It is checked for adherence to the spec by the design. The tool used for Simulating the design is a Simulator.  Design is done with verilog code or a set of verilog codes which has intented functionality to meet with the required specfication.
       RTL Design stands for Register Transfer Level. It provides an abstraction of the digital circuit using:
       Combinational logic, Registers, Modules (IP’s or Soft Macros).
+      
+    ![](images/Testbench.png)  
       
 **Test Bench**:
       It is the Setup to apply stimulus(Test_Vectors) to Design to check it's Functionality.Here the Logical functionality is verified.
