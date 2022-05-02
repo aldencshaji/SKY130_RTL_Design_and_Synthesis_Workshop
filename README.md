@@ -200,8 +200,17 @@ Wider Transistor --> Low Delay --> More Area and Power.
 
        *!gvim good_mux_netlist.v
        
+       ![](images/good_mux_code_generate.PNG)
        
+     - To get a even more simplified netlist, the command is
+
+       *write_verilog -noattr good_mux_netlist.v
+       
+     -  the simplified netlist can be viewed by
+      
+        *!gvim good_mux_netlist.v
          
+       ![](images/simplified_netlist.PNG)
  
  
  
