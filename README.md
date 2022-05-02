@@ -19,9 +19,13 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
     - [3.3.1 Glitches](#331-glitches)
     - [3.3.2 Flip Flop Simulation](#332-flip-flop-simulation)
  - [4. Day 3 - Combinational and Sequential Optimizations](#3-day-2---combinational-and-sequential-optimizations)
-   - [4.1.Combinational Logic Optimization](#41-combinational-logic-optimization)
-   - [4.2.Sequential Logic Optimization](#41-sequential-logic-optimization)
- 
+   - [4.1. Combinational Logic Optimization](#41-combinational-logic-optimization)
+   - [4.2. Sequential Logic Optimization](#42-sequential-logic-optimization)
+- [5. Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](#5-day-4---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
+   - [5.1. Synthesis - Simulation Mismatch](#51-synthesis-simulation-mismatch)
+
+
+
 
 # 1. Project Scope
   This is a 5-day workshop from VSD-IAT on RTL design and synthesis using open source silicon toolchains involving iVerilog, GTKWave, Yosys with Sky130 technology.  
@@ -337,13 +341,60 @@ Wider Transistor --> Low Delay --> More Area and Power.
       ## 4.2 Sequential Logic Optimization
       
        **Sequential Constant Propogation**:
-         - Some of the Sequential design in which D input is tied off the Squential Constant is propogated to give Q pin as a Constant and gives the most optmised design of the Squential Circuits.
-         - The Sequential Design in which Q does not remains as constant cannot be optimised and flop needs to be retained in the circuit.
+       
+        - Some of the Sequential design in which D input is tied off the Squential Constant is propogated to give Q pin as a Constant and gives the most optmised design of the Squential Circuits.
+        - The Sequential Design in which Q does not remains as constant cannot be optimised and flop needs to be retained in the circuit.
 
       
       ![](images/sequential_optimisation.PNG)
       
       
+   # 5.  Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+   Gate Level Simulation is run for verifiction of logic in the circuit and to check the timings and the GLS must be run with delay annotation.
       
+  ## 5.1 Synthesis - Simulation Mismatch
+  
+   There is need for verification because of this synthesis - simulation mismatch. Major reasons for this mismatch are,
+   
+   - **Missing Sensitivity List**
+   
+       The simulator generally works based on the activity, in other words the change in inputs will initiate to get the outputs. For example, let take a MUX
+   
+       ![](images/missing_sens.PNG)
+   
+       From the above code snippet, the always block works only when the select is high. So it is insensitive to the other inputs such as i0 and i1. Once there is a change in the sel value the i1 values will be assigned to the y, but the changes of i1 will not be reflected in the output y. So that is wrong and insensitive. This is called as missing elements of selectivity list.
+       
+       The correct way of writing the code is,
+
+     ![](images/missing_sense_1.PNG)
+
+Here in this code, always@(*) the star means the always block will be executed whenever there is a change in the signals.
+
+
+   - **Blocking & Non-Blocking assignments**
+   
+   These two assignments are always written inside the blocks. Non blocking assignments does parallel evaluation, executes RHS and will assign the same to the LHS. Blocking Assignments executes the code in the same order of writing.
+   
+   *iverilog ternary_operator_mux.v tb_ternary_operator_mux.v 
+   
+   *./a.out
+   
+   *gtkwave tb_ternary_operator_mux.vcd
+   
+   ![](images/ternary_gtk.PNG)
+   
+   synthesis using yosys
+   
+   ![](images/ternary_opr.PNG)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
    
