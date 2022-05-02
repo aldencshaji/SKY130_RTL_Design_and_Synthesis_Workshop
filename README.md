@@ -397,13 +397,15 @@ Here in this code, always@(*) the star means the always block will be executed w
    
   This is a general if else construct,
   
-   * if(condtion1)
+   * 
+    if(condtion1)
        -----
     elseif(condition2)
        -----
     else
        -----  
        
+   *   
        
    ![](images/incom_if.PNG)
    
