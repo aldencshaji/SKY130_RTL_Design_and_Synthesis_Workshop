@@ -18,15 +18,15 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
   - [3.3. Flops and Flop Coding Styles](#33-flops-and-flop-coding-styles)
     - [3.3.1 Glitches](#331-glitches)
     - [3.3.2 Flip Flop Simulation](#332-flip-flop-simulation)
- - [4. Day 3 - Combinational and Sequential Optimizations](#3-day-2---combinational-and-sequential-optimizations)
+ - [4. Day 3 - Combinational and Sequential Optimizations](#4-day-3---combinational-and-sequential-optimizations)
    - [4.1. Combinational Logic Optimization](#41-combinational-logic-optimization)
    - [4.2. Sequential Logic Optimization](#42-sequential-logic-optimization)
-- [5. Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](#5-day-4---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
-   - [5.1. Synthesis - Simulation Mismatch](#51-synthesis-simulation-mismatch)
-- [6. Day 5 - If case for loop and for generate](#6-day-5-if-case-for-loop-and-for-generate)
+- [5. Day 4 - GLS Blocking vs Non Blocking and Synthesis Simulation Mismatch](#5-day-4---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
+   - [5.1. Synthesis - Simulation Mismatch](#51-synthesis---simulation-mismatch)
+- [6. Day 5 - If case for loop and for generate](#6-day-5---if-case-for-loop-and-for-generate)
    - [6.1.If else constructs](#61-if-else-constructs)
    - [6.2.For loop and For generate](#62-for-loop-and-for-generate)
-- [7. Acknowledgements](#7-Acknowledgements)
+- [7. Acknowledgements](#7-acknowledgements)
 
 # 1. Project Scope
   This is a 5-day workshop from VSD-IAT on RTL design and synthesis using open source silicon toolchains involving iVerilog, GTKWave, Yosys with Sky130 technology.  
@@ -350,7 +350,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
       ![](images/sequential_optimisation.PNG)
       
       
-   # 5.  Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+   # 5. Day 4 - GLS Blocking vs Non Blocking and Synthesis Simulation Mismatch
    Gate Level Simulation is run for verifiction of logic in the circuit and to check the timings and the GLS must be run with delay annotation.
       
   ## 5.1. Synthesis - Simulation Mismatch
