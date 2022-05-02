@@ -174,6 +174,8 @@ Wider Transistor --> Low Delay --> More Area and Power.
      *synth -top good_mux
    
      ![](images/gates_generate.PNG)
+     
+     here we can see the no of cells thate generate for this file synthesis
    
    - To generate the netlist, the command is
 
@@ -181,14 +183,25 @@ Wider Transistor --> Low Delay --> More Area and Power.
     
      ![](images/signals_generate_yosys.PNG)
      
+      we can see that the RTL design is converted into the standard cell design from the library file we mentioned in the command. Now if we look a little close we can see that it has shown the input and output signals.
+     
      - Now if we want to see the logic realized by the circuit, type show
        
        *show
      
       ![](images/yosys_mux_generate.PNG)
       
-     we can see that the RTL design is converted into the standard cell design from the library file we mentioned in the command. Now if we look a little close we can see that it has shown the input and output signals.
- 
+      
+     -  To get the netlist, write the command
+      
+       *write_verilog good_mux_netlist.v
+       
+     - To open the netlist,
+
+       *!gvim good_mux_netlist.v
+       
+       
+         
  
  
  
