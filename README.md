@@ -157,29 +157,37 @@ Wider Transistor --> Low Delay --> More Area and Power.
   
   - Before invoking yosys we must in the directory verilog_file. To invoke yosys, just type yosys
    
-   *yosys
+     *yosys
    
-   ![](images/yosys_open.PNG)
+     ![](images/yosys_open.PNG)
    
    - to read the library.
 
-   *yosys> read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+     *yosys> read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
    
    - lets read a verilog file (mux_generate.v) by using the command,
 
-   *read_verilog mux_generate.v
+     *read_verilog mux_generate.v
    
    - Now to synthesize the good_mux module, the command is
 
-   *synth -top good_mux
+     *synth -top good_mux
    
-   ![](images/gates_generate.PNG)
+     ![](images/gates_generate.PNG)
    
    - To generate the netlist, the command is
 
-   *abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+     *abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     
-   ![](images/signals_generate_yosys.PNG)
+     ![](images/signals_generate_yosys.PNG)
+     
+     - Now if we want to see the logic realized by the circuit, type show
+       
+       *show
+     
+      ![](images/yosys_mux_generate.PNG)
+      
+     we can see that the RTL design is converted into the standard cell design from the library file we mentioned in the command. Now if we look a little close we can see that it has shown the input and output signals.
  
  
  
