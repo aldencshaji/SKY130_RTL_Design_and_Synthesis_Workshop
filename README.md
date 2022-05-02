@@ -26,7 +26,7 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
 - [6. Day 5 - If case for loop and for generate](#6-day-5-if-case-for-loop-and-for-generate)
    - [6.1.If else constructs](#61-if-else-constructs)
    - [6.2.For loop and For generate](#62-for-loop-and-for-generate)
-
+- [7. Acknowledgements](#7-Acknowledgements)
 
 # 1. Project Scope
   This is a 5-day workshop from VSD-IAT on RTL design and synthesis using open source silicon toolchains involving iVerilog, GTKWave, Yosys with Sky130 technology.  
@@ -311,7 +311,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
    ![](images/dff_asyncres_yosys.PNG)
    
   # 4. Day 3 - Combinational and Sequential Optimizations 
-  ## 4.1 Combinational Logic Optimization
+  ## 4.1. Combinational Logic Optimization
    We need combinational logic optimisation to squeeze the logic to get the most optimised design.
    
    - Mainly for Area and Power Saving
@@ -339,7 +339,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
       
        we can see that after synthesis it has been optimized to an AND gate.
       
-      ## 4.2 Sequential Logic Optimization
+      ## 4.2. Sequential Logic Optimization
       
        **Sequential Constant Propogation**:
        
@@ -353,7 +353,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
    # 5.  Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
    Gate Level Simulation is run for verifiction of logic in the circuit and to check the timings and the GLS must be run with delay annotation.
       
-  ## 5.1 Synthesis - Simulation Mismatch
+  ## 5.1. Synthesis - Simulation Mismatch
   
    There is need for verification because of this synthesis - simulation mismatch. Major reasons for this mismatch are,
    
@@ -416,7 +416,10 @@ Here in this code, always@(*) the star means the always block will be executed w
    
    ![](images/tb_rca.PNG)
    
-   
+  # 7. Acknowledgements
+  
+   - Kunal Ghosh <https://github.com/kunalg123> 
+   - Shon Taware <https://github.com/ShonTaware>
    
    
    
