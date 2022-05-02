@@ -113,8 +113,46 @@ The simulation output of iVerilog can be taken as a value change dump ('.vcd') f
     
     Now a editor will be opened displaying the verilog testbench code for good_mux.v
   
-  ## 3.3. Synthesis Operation
+  ## 3.3. Logic Synthesis
   ### 3.3.1 Introduction to YOSYS
   
-  Synthesizer is a tool for the conversion of RTL Design to Netlist. For this workshop, we are going to use the open-source synthesizer, Yosys. When .lib and Design are applied to the Yosys, Netlist of the design is resulted.
+  **Synthesis** is the process of conversion of RTL to Gate Level Translation. The design is converted into gates and the connections are made between the gates. This is given out as a file called Netlist. 
+  
+  **Synthesizer** is a tool for the conversion of RTL Design to Netlist. For this workshop, we are going to use the open-source synthesizer, Yosys. When .lib and Design files are applied to the Yosys, Netlist of the design is resulted output file.
+  
+   ![](images/yosys_intro.PNG)
+  
+Note: Stimulus provided must be same as output observed during RTL design simulation. We can use the same testbench which we used for the RTL design simulation.
+
+**.lib**   
+- contains collection of logical modules
+- Include basic logic gates
+- Different flavours of same gate like 3 input AND gate have(slow, medium, fast) types are there
+
+**Why Different Flavours of Gate Required?**
+
+As the combinational delay in the logic path determines the maximum speed of operation of digital logic circuit i.e
+Tclk > TCQ_A + Tcombi+TSetup_B 
+we need cells to work fast.
+
+And to ensure that there is no hold issue in the next flop we need slow cell and as hold time is given by
+THold_B < TCQ_A + Tcombi 
+we need cell that work slowly.
+
+We need cells that work fast to meet performance and cells that work slow to meet Hold time. So we need different flavours of gate to meet this requirement.The Collection forms .lib.
+
+**Note**:
+
+Load in Digital Logic Circuit --> Capacitance
+Faster the charging/discharging --> Lesser the cell delay
+
+To Charge/Discharge the capacitance fast, we need Transistors capable of sourcing more current.
+Wider Transistor --> Low Delay --> More Area and Power.
+
+**Selection of Cells**
+
+- Need to guide the synthesizer to select he cells that are optimum for implementation of logic design.
+- More use of Faster cells results in bad circuit in terms of area and power and also might voilet the Hold time.
+- More use of slower cells results in sluggish circuit.
+- The Guidance given to the synthesizer is known as 'contraints'.
 
