@@ -132,12 +132,12 @@ Note: Stimulus provided must be same as output observed during RTL design simula
 **Why Different Flavours of Gate Required?**
 
 As the combinational delay in the logic path determines the maximum speed of operation of digital logic circuit i.e
-Tclk > TCQ_A + Tcombi+TSetup_B 
-we need cells to work fast.
+
+Tclk > TCQ_A + Tcombi+TSetup_B            we need cells to work fast.
 
 And to ensure that there is no hold issue in the next flop we need slow cell and as hold time is given by
-THold_B < TCQ_A + Tcombi 
-we need cell that work slowly.
+
+THold_B < TCQ_A + Tcombi                  we need cell that work slowly.
 
 We need cells that work fast to meet performance and cells that work slow to meet Hold time. So we need different flavours of gate to meet this requirement.The Collection forms .lib.
 
