@@ -14,8 +14,10 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
    - [2.3.2. To Invoke YOSYS](#232-to-invoke-yosys)
 - [3. Day 2 - Timing libs Hierarical vs Flat Synthesis and Efficient Flop Coding Styles](#3-day-2---timing-libs-hierarical-vs-flat-synthesis-and-efficient-flop-coding-styles)
   - [3.1. Introduction to lib](#31-introduction-to-lib)
-  - [3.1. Hierarchial vs Flat Synthesis](#32-hierarchial-vs-flat-synthesis)
-
+  - [3.2. Hierarchial vs Flat Synthesis](#32-hierarchial-vs-flat-synthesis)
+  - [3.3. Flops and Flop Coding Styles](#33-flops-and-flop-coding-styles)
+   - [3.3.1 Glitches](#331-glitches)
+   - [3.3.2 Flip Flop Simulation](#332-flip-flop-simulation)
 
 
 
@@ -284,7 +286,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
    - To remove the glitches we require storage elements, these elements are **Flip Flops**.
    - FF output will change only at clock edges.
   
-  ### 3.3.2 Flip Flop simulation
+  ### 3.3.2 Flip Flop Simulation
   
    Let us observe and simulate the flop styles. First lets simulate the file dff_asyncres.v using iVerilog,
   
@@ -299,7 +301,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
    Now let us synthesis the ff design using yosys,
    
    
-   ![](images/dff_asynres_yosys.PNG)
+   ![](images/dff_asyncres_yosys.PNG)
    
    
    
