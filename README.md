@@ -23,7 +23,7 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
    - [4.2. Sequential Logic Optimization](#42-sequential-logic-optimization)
 - [5. Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](#5-day-4---gls-blocking-vs-non-blocking-and-synthesis-simulation-mismatch)
    - [5.1. Synthesis - Simulation Mismatch](#51-synthesis-simulation-mismatch)
-- [6. Day 5 - If, case, for loop and for generate](#6-day-5-if-case-for-loop-and-for-generate)
+- [6. Day 5 - If case for loop and for generate](#6-day-5-if-case-for-loop-and-for-generate)
    - [6.1.If else constructs](#61-if-else-constructs)
    - [6.2.For loop and For generate](#62-for-loop-and-for-generate)
 
@@ -391,7 +391,7 @@ Here in this code, always@(*) the star means the always block will be executed w
    
    
    
-  # 6. Day 5 - If, case, for loop and for generate
+  # 6. Day 5 - If case for loop and for generate
   
   ## 6.1 If else constructs
    
