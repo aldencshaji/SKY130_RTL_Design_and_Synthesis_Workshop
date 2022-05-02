@@ -153,3 +153,36 @@ Wider Transistor --> Low Delay --> More Area and Power.
 - More use of slower cells results in sluggish circuit.
 - The Guidance given to the synthesizer is known as 'contraints'.
 
+ ### 2.3.2  To Invoke YOSYS
+  
+  - Before invoking yosys we must in the directory verilog_file. To invoke yosys, just type yosys
+   
+   *yosys
+   
+   ![](images/yosys_open.PNG)
+   
+   - to read the library.
+
+   *yosys> read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   
+   - lets read a verilog file (mux_generate.v) by using the command,
+
+   *read_verilog mux_generate.v
+   
+   - Now to synthesize the good_mux module, the command is
+
+   *synth -top good_mux
+   
+   ![](images/gates_generate.PNG)
+   
+   - To generate the netlist, the command is
+
+   *abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    
+   ![](images/signals_generate_yosys.PNG)
+ 
+ 
+ 
+ 
+ 
+ 
