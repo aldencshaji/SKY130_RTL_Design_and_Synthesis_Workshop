@@ -212,6 +212,11 @@ Wider Transistor --> Low Delay --> More Area and Power.
          
        ![](images/simplified_netlist.PNG)
  
+       In the Logic Circuit generated we can observe
+
+       - nand2_1 --> 2 input Nand gate
+       - o21ai_0 --> or and inverter
+       - clkinv_1 --> inverter
  
  
  
