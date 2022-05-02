@@ -10,14 +10,15 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
   - [2.1. Design and Simulation flow](#21-design-and-simulation-flow)
   - [2.2. Introduction to Lab Session](#22-introduction-to-lab-session)
   - [2.3. Logic Synthesis](#23-logic-synthesis)
-   - [2.3.1. Introduction to YOSYS](#231-introduction-to-yosys)
-   - [2.3.2. To Invoke YOSYS](#232-to-invoke-yosys)
+    - [2.3.1. Introduction to YOSYS](#231-introduction-to-yosys)
+    - [2.3.2. To Invoke YOSYS](#232-to-invoke-yosys)
 - [3. Day 2 - Timing libs Hierarical vs Flat Synthesis and Efficient Flop Coding Styles](#3-day-2---timing-libs-hierarical-vs-flat-synthesis-and-efficient-flop-coding-styles)
   - [3.1. Introduction to lib](#31-introduction-to-lib)
   - [3.2. Hierarchial vs Flat Synthesis](#32-hierarchial-vs-flat-synthesis)
   - [3.3. Flops and Flop Coding Styles](#33-flops-and-flop-coding-styles)
-   - [3.3.1 Glitches](#331-glitches)
-   - [3.3.2 Flip Flop Simulation](#332-flip-flop-simulation)
+    - [3.3.1 Glitches](#331-glitches)
+    - [3.3.2 Flip Flop Simulation](#332-flip-flop-simulation)
+ - [4. Day 3 - Combinational and Sequential Optimizations](#3-day-2---combinational-and-sequential-optimizations)
 
 
 
