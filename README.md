@@ -9,12 +9,10 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
 - [2. Day 1 - Introduction to Verilog RTL design and Synthesis](#2-day-1---introduction-to-verilog-rtl-design-and-synthesis)
   - [2.1. Design and Simulation flow](#21-design-and-simulation-flow)
   - [2.2. Introduction to Lab Session](#22-introduction-to-lab-session)
-  - [2.3. Synthesis Operation](#23-synthesis-operation)
+  - [2.3. Logic Synthesis](#23-logic-synthesis)
    - [2.3.1. Introduction to YOSYS](#231-introduction-to-yosys)
    - [2.3.2. To Invoke YOSYS](#232-to-invoke-yosys)
-     
 - [3. Day 2 - Timing libs Hierarical vs Flat Synthesis and Efficient Flop Coding Styles](#3-day-2---timing-libs-hierarical-vs-flat-synthesis-and-efficient-flop-coding-styles)
-
 
 
 
@@ -149,7 +147,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
 - More use of slower cells results in sluggish circuit.
 - The Guidance given to the synthesizer is known as 'contraints'.
 
- ### 2.3.2  To Invoke YOSYS
+ ### 2.3.2 To Invoke YOSYS
   
   - Before invoking yosys we must in the directory verilog_file. To invoke yosys, just type yosys
    
@@ -215,7 +213,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
        - clkinv_1 --> inverter
 
 
- #3. Day 2 - Timing libs Hierarical vs Flat Synthesis and Efficient Flop Coding Styles
+ # 3. Day 2 - Timing libs Hierarical vs Flat Synthesis and Efficient Flop Coding Styles
  
  
  
