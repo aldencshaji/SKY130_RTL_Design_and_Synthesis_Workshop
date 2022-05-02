@@ -8,9 +8,11 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
 - [1. Project Scope](#1-project-scope)
 - [2. Prerequisites](#2-prerequisites)
 - [3. Day 1 - Introduction to Verilog RTL design and Synthesis](#3-day-1---introduction-to-verilog-rtl-design-and-synthesis)
-  - [3.1. Brief Principles of Operation](#31-brief-principles-of-operation)
+  - [3.1. Design and Simulation flow](#31-design-and-simulation-flow)
   - [3.2. Introduction to Lab Session](#32-introduction-to-lab-session)
-    - [2.2.1. Yosys synthesizer flow](#221-yosys-synthesizer-flow)
+  - [3.3. Synthesis Operation](#33-synthesis-operation)
+   - [3.3.1. Introduction to YOSYS](#331-introduction-to-yosys)
+   - [3.3.1. Yosys Synthesizer](#331-yosys-synthesizer-flow)
       - [2.2.1.1. Read RTL design](#2211-read-rtl-design)
       - [2.2.1.2. Generic synthesis](#2212-generic-synthesis)
       - [2.2.1.3. Read Sky130 cell library](#2213-read-sky130-cell-library)
@@ -40,7 +42,7 @@ This particular workshop covers the various aspects of design in Verilog HDL bot
   - Basic knowledge of Verilog HDL is required for better understanding.
 
 # 3. Day 1 - Introduction to Verilog RTL design and Synthesis
-## 3.1. Brief Principles of Operation
+## 3.1. Design and Simulation flow
 
 **Simulation**:
      It is technique for applying different input stimulus to the design at different times to check if the RTL code behaves in an intended way. Here we are dealing with Digital design which is modelled using HDL (hardware description language) like VHDL,Verilog,System Verilog.
@@ -97,3 +99,22 @@ The simulation output of iVerilog can be taken as a value change dump ('.vcd') f
  
    *gtkwave tb_good_mux.vcd
   
+![](images/gtkwave_open.PNG)
+                          commands in terminal for opening GTKWAVE
+
+![](images/gtkwave_good_mux.PNG)
+                          waveform pattern for good_mux.v
+  
+  - To view the verilog code  
+  
+    *gvim <verilog_file.v>
+    
+    ![](images/tb_good_mux_code.jpg)
+    
+    Now a editor will be opened displaying the verilog testbench code for good_mux.v
+  
+  ## 3.3. Synthesis Operation
+  ### 3.3.1 Introduction to YOSYS
+  
+  Synthesizer is a tool for the conversion of RTL Design to Netlist. For this workshop, we are going to use the open-source synthesizer, Yosys. When .lib and Design are applied to the Yosys, Netlist of the design is resulted.
+
