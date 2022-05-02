@@ -216,24 +216,24 @@ Wider Transistor --> Low Delay --> More Area and Power.
  # 3. Day 2 - Timing libs Hierarical vs Flat Synthesis and Efficient Flop Coding Styles
  ## 3.1 Introduction to lib
 
- We have used **sky130_fd_sc_hd__tt_025C_1v80** for which meaning of each abbreviation is given below:
+ We have used **sky130_fd_sc_hd__tt_025C_1v80**; meaning of each abbreviation is given below:
 
- - fd - the skywater foundary
- - sc - digital standard cell
- - hd - high density
- - tt - typical process
- - 025C - temperature
- - 1v80 - voltage
+  - fd - the skywater foundary
+  - sc - digital standard cell
+  - hd - high density
+  - tt - typical process
+  - 025C - temperature
+  - 1v80 - voltage
  
-- We already know about .lib, but now lets look what it looks like in an editor. After going to the verilog_files directory, type
+ -- We already know about .lib, but now lets look what it looks like in an editor. After going to the verilog_files directory, type
 
-  *gvim ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   *gvim ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   
   
   ![](images/leakage_power_combination.PNG)
   
- Some of the details which are provided in the .lib file are
- - power, area, capacitance, timings, pin details
+   Some of the details which are provided in the .lib file are
+     - power, area, capacitance, timings, pin details
 
  Now for better understanding in comparison, let us take the three flavours of the same cell **2 input AND**.
 
@@ -243,7 +243,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
  
  - The file we are going to synthesize is multiple_modules. Lets open it by 
  
- *gvim multiple-modules.v
+   *gvim multiple-modules.v
  
   ![](images/multiple_modules.PNG)
  
@@ -254,13 +254,13 @@ Wider Transistor --> Low Delay --> More Area and Power.
  
  We can see the modules itself inside the multiple_modules instance instead of the AND and OR gates. Here the hierarchies are preserved, so it is called as Hierarchial design. Now let us look the netlist generated from this design,
 
- *write_verilog -noattr multiple_modules_hier.v
+   *write_verilog -noattr multiple_modules_hier.v
 
- *!gvim multiple_modules_hier.v
+   *!gvim multiple_modules_hier.v
  
   ![](images/yosys_multiple_module.PNG)
  
- Now lets generate a flat netlist using the commands
+ - Now lets generate a flat netlist using the commands
  
    *flatten
  
@@ -273,4 +273,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
     *vsp 
  
   ![](images/comparison_flatten.PNG)
+  
+  
+  
  
