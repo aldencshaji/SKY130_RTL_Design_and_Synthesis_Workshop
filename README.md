@@ -341,7 +341,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
          - The Sequential Design in which Q does not remains as constant cannot be optimised and flop needs to be retained in the circuit.
 
       
-      
+      ![](images/sequential_optimisation.PNG)
       
       
       
