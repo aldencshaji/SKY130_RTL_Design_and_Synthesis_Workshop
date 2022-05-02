@@ -11,13 +11,9 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
   - [2.2. Introduction to Lab Session](#22-introduction-to-lab-session)
   - [2.3. Synthesis Operation](#23-synthesis-operation)
    - [2.3.1. Introduction to YOSYS](#231-introduction-to-yosys)
-   - [2.3.1. Yosys Synthesizer](#231-yosys-synthesizer-flow)
-      - [2.2.1.1. Read RTL design](#2211-read-rtl-design)
-      - [2.2.1.2. Generic synthesis](#2212-generic-synthesis)
-      - [2.2.1.3. Read Sky130 cell library](#2213-read-sky130-cell-library)
-      - [2.2.1.4. Generate netlist](#2214-generate-netlist)
-      - [2.2.1.5. Show](#2215-show)
-
+   - [2.3.2. To Invoke YOSYS](#231-to-invoke-yosys)
+     
+- [3. Day 2 - Timing libs, Hierarical vs Flat Synthesis and Efficient Flop Coding Styles](#3-day-2---timing-libs,-hierarical-vs-flat-synthesis-and-efficient-flop-coding-styles)
 
 
 
@@ -217,6 +213,9 @@ Wider Transistor --> Low Delay --> More Area and Power.
        - nand2_1 --> 2 input Nand gate
        - o21ai_0 --> or and inverter
        - clkinv_1 --> inverter
+
+
+ #3. Day 2 - Timing libs, Hierarical vs Flat Synthesis and Efficient Flop Coding Styles
  
  
  
