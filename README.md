@@ -16,8 +16,8 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
   - [3.1. Introduction to lib](#31-introduction-to-lib)
   - [3.2. Hierarchial vs Flat Synthesis](#32-hierarchial-vs-flat-synthesis)
   - [3.3. Flops and Flop Coding Styles](#33-flops-and-flop-coding-styles)
-    - [3.3.1 Glitches](#331-glitches)
-    - [3.3.2 Flip Flop Simulation](#332-flip-flop-simulation)
+    - [3.3.1. Glitches](#331-glitches)
+    - [3.3.2. Flip Flop Simulation](#332-flip-flop-simulation)
  - [4. Day 3 - Combinational and Sequential Optimizations](#4-day-3---combinational-and-sequential-optimizations)
    - [4.1. Combinational Logic Optimization](#41-combinational-logic-optimization)
    - [4.2. Sequential Logic Optimization](#42-sequential-logic-optimization)
@@ -285,7 +285,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
   
   
   ## 3.3 Flops and Flop Coding Styles
-  ### 3.3.1 Glitches
+  ### 3.3.1. Glitches
   
    ![](images/glitches.PNG)
   
@@ -293,7 +293,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
    - To remove the glitches we require storage elements, these elements are **Flip Flops**.
    - FF output will change only at clock edges.
   
-  ### 3.3.2 Flip Flop Simulation
+  ### 3.3.2. Flip Flop Simulation
   
    Let us observe and simulate the flop styles. First lets simulate the file dff_asyncres.v using iVerilog,
   
