@@ -214,7 +214,30 @@ Wider Transistor --> Low Delay --> More Area and Power.
 
 
  # 3. Day 2 - Timing libs Hierarical vs Flat Synthesis and Efficient Flop Coding Styles
+ ## 3.1 Introduction to .lib
+
+ We have used **sky130_fd_sc_hd__tt_025C_1v80** for which meaning of each abbreviation is given below:
+
+ - fd - the skywater foundary
+ - sc - digital standard cell
+ - hd - high density
+ - tt - typical process
+ - 025C - temperature
+ - 1v80 - voltage
  
+- We already know about .lib, but now lets look what it looks like in an editor. After going to the verilog_files directory, type
+
+  *gvim ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  
+  
+  ![](images/leakage_power_combination.PNG)
+  
+ Some of the details which are provided in the .lib file are
+ - power, area, capacitance, timings, pin details
+
+- Now for better understanding in the comparison let us take the three flavours of the same cell **2 input AND**.
+
+ ![](images/comparison_gate.PNG)
  
  
  
