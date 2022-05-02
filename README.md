@@ -13,8 +13,8 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
    - [2.3.1. Introduction to YOSYS](#231-introduction-to-yosys)
    - [2.3.2. To Invoke YOSYS](#232-to-invoke-yosys)
 - [3. Day 2 - Timing libs Hierarical vs Flat Synthesis and Efficient Flop Coding Styles](#3-day-2---timing-libs-hierarical-vs-flat-synthesis-and-efficient-flop-coding-styles)
-
-
+  - [3.1. Introduction to lib](#31-introduction-to-lib)
+  - [3.1. Hierarchial vs Flat Synthesis](#32-hierarchial-vs-flat-synthesis)
 
 
 
@@ -214,7 +214,7 @@ Wider Transistor --> Low Delay --> More Area and Power.
 
 
  # 3. Day 2 - Timing libs Hierarical vs Flat Synthesis and Efficient Flop Coding Styles
- ## 3.1 Introduction to .lib
+ ## 3.1 Introduction to lib
 
  We have used **sky130_fd_sc_hd__tt_025C_1v80** for which meaning of each abbreviation is given below:
 
@@ -235,9 +235,42 @@ Wider Transistor --> Low Delay --> More Area and Power.
  Some of the details which are provided in the .lib file are
  - power, area, capacitance, timings, pin details
 
-- Now for better understanding in the comparison let us take the three flavours of the same cell **2 input AND**.
+ Now for better understanding in comparison, let us take the three flavours of the same cell **2 input AND**.
 
  ![](images/comparison_gate.PNG)
  
+ ## 3.2 Hierarchial vs Flat Synthesis
  
+ - The file we are going to synthesize is multiple_modules. Lets open it by 
+ 
+ *gvim multiple-modules.v
+ 
+  ![](images/multiple_modules.PNG)
+ 
+ This is the multiple_modules.v file with two sub modules (OR and AND ), the main module instantiates the both modules within it. Now let us synthesis the file using yosys
+ 
+ 
+  ![](images/sub_module.PNG)
+ 
+ We can see the modules itself inside the multiple_modules instance instead of the AND and OR gates. Here the hierarchies are preserved, so it is called as Hierarchial design. Now let us look the netlist generated from this design,
+
+ *write_verilog -noattr multiple_modules_hier.v
+
+ *!gvim multiple_modules_hier.v
+ 
+  ![](images/yosys_multiple_module.PNG)
+ 
+ Now lets generate a flat netlist using the commands
+ 
+   *flatten
+ 
+   *write_verilog multiple_modules_flat.v
+ 
+   *!gvim multiple_modules_flat.v
+ 
+ - Now for comparison of both synthesis, use:
+  
+    *vsp 
+ 
+  ![](images/comparison_flatten.PNG)
  
