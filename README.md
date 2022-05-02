@@ -275,5 +275,32 @@ Wider Transistor --> Low Delay --> More Area and Power.
   ![](images/comparison_flatten.PNG)
   
   
+  ## 3.3 Flops and Flop Coding Styles
+  ### 3.3.1 Glitches
   
- 
+   ![](images/glitches.PNG)
+  
+   - More are the combinational circuits more the glitches will be.
+   - To remove the glitches we require storage elements, these elements are **Flip Flops**.
+   - FF output will change only at clock edges.
+  
+  ### 3.3.2 Flip Flop simulation
+  
+   Let us observe and simulate the flop styles. First lets simulate the file dff_asyncres.v using iVerilog,
+  
+   *iverilog dff_asyncres.v tb_dff_asyncres.v
+
+   *./a.out
+   
+   *gtkwave tb_dff_asyncres.vcd
+
+   ![](images/gtkwave_dff_async.PNG)
+   
+   Now let us synthesis the ff design using yosys,
+   
+   
+   ![](images/dff_asynres_yosys.PNG)
+   
+   
+   
+   
