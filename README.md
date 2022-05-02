@@ -19,8 +19,9 @@ VSD Workshop on RTL Design using Verilog HDL and Synthesis using SKY130 Technolo
     - [3.3.1 Glitches](#331-glitches)
     - [3.3.2 Flip Flop Simulation](#332-flip-flop-simulation)
  - [4. Day 3 - Combinational and Sequential Optimizations](#3-day-2---combinational-and-sequential-optimizations)
-
-
+   - [4.1.Combinational Logic Optimization](#41-combinational-logic-optimization)
+   - [4.2.Sequential Logic Optimization](#41-sequential-logic-optimization)
+ 
 
 # 1. Project Scope
   This is a 5-day workshop from VSD-IAT on RTL design and synthesis using open source silicon toolchains involving iVerilog, GTKWave, Yosys with Sky130 technology.  
@@ -304,6 +305,45 @@ Wider Transistor --> Low Delay --> More Area and Power.
    
    ![](images/dff_asyncres_yosys.PNG)
    
+  # 4. Day 3 - Combinational and Sequential Optimizations 
+  ## 4.1 Combinational Logic Optimization
+   We need combinational logic optimisation to squeeze the logic to get the most optimised design.
    
+   - Mainly for Area and Power Saving
+   - Constant Propogation is one of the technique used for Combinational Logic Optimisation
+        It is a Direct Optimisation in which the value of one input is propogated to the next stage to get the most optimised logic.       
+   - Another Technique Used is the Boolean Logic Optimisation in which we use and other tools to get the most optimised logic.
+   
+      *gvim opt_check.v
+   
+      *read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+   
+      *read_verilog opt_check.v
+   
+      *synth -top opt_check
+   
+   - The command for the constant propagation and optimization
+
+      *opt_clean -purge
+      
+      *abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      
+      *show
+      
+      ![](images/opt_check.PNG)
+      
+       we can see that after synthesis it has been optimized to an AND gate.
+      
+      ## 4.2 Sequential Logic Optimization
+      
+       **Sequential Constant Propogation**:
+         - Some of the Sequential design in which D input is tied off the Squential Constant is propogated to give Q pin as a Constant and gives the most optmised design of the Squential Circuits.
+         - The Sequential Design in which Q does not remains as constant cannot be optimised and flop needs to be retained in the circuit.
+
+      
+      
+      
+      
+      
    
    
